@@ -12,7 +12,8 @@ Simple and cool **Angular** widget to create tutorial pages
 
 # Introduction
 
-**ngTutorial** is an AngularJS module, that lets you easily retrieve your posts from Twitter!
+**ngTutorial** is an AngularJS module, that lets you easily create a tutorial page on your website!
+See the demo at tonysamperi.github.io/ng-tutorial
 
 # Requirements
 
