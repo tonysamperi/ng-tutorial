@@ -4,17 +4,26 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-.list-group-tony{
-     width: 50%;
-     margin: 0 auto;
- }
+.navbar-fixed-top {
+    z-index: 999996;
+}
 
-.list-group-tony a{
+[tutorial] {
+    border: 3px solid #15a589;
+}
+
+.list-group-tony {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.list-group-tony a {
     background: #2c3e50;
     color: #FFF;
     text-align: center;
 }
-.list-group-tony a:hover{
+
+.list-group-tony a:hover {
     background: #18bc9c;
     color: #FFF;
 }
@@ -47,7 +56,7 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
 }
 
@@ -113,7 +122,7 @@ header img {
 header .intro-text .name {
     display: block;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 2em;
     font-weight: 700;
 }
@@ -123,7 +132,7 @@ header .intro-text .skills {
     font-weight: 300;
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
     header .container {
         padding-top: 200px;
         padding-bottom: 100px;
@@ -138,7 +147,7 @@ header .intro-text .skills {
     }
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
     .navbar-fixed-top {
         padding: 25px 0;
         -webkit-transition: padding .3s;
@@ -164,7 +173,7 @@ header .intro-text .skills {
 
 .navbar {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
 }
 
@@ -208,7 +217,7 @@ section.success a.active {
     color: #2c3e50;
 }
 
-@media(max-width:767px) {
+@media (max-width: 767px) {
     section {
         padding: 75px 0;
     }
@@ -235,7 +244,7 @@ section.success a.active {
     width: 100%;
     height: 100%;
     opacity: 0;
-    background: rgba(24,188,156,.9);
+    background: rgba(24, 188, 156, .9);
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
@@ -269,7 +278,7 @@ section.success a.active {
     z-index: 2;
 }
 
-@media(min-width:767px) {
+@media (min-width: 767px) {
     #portfolio .portfolio-item {
         margin: 0 0 30px;
     }
@@ -310,7 +319,7 @@ section.success a.active {
     border-radius: 0;
     font-size: 1.5em;
     background: 0 0;
-    box-shadow: none!important;
+    box-shadow: none !important;
     resize: none;
 }
 
@@ -325,10 +334,10 @@ section.success a.active {
     vertical-align: middle;
     vertical-align: baseline;
     opacity: 0;
-    -webkit-transition: top .3s ease,opacity .3s ease;
-    -moz-transition: top .3s ease,opacity .3s ease;
-    -ms-transition: top .3s ease,opacity .3s ease;
-    transition: top .3s ease,opacity .3s ease;
+    -webkit-transition: top .3s ease, opacity .3s ease;
+    -moz-transition: top .3s ease, opacity .3s ease;
+    -ms-transition: top .3s ease, opacity .3s ease;
+    transition: top .3s ease, opacity .3s ease;
 }
 
 .floating-label-form-group::not(:first-child) {
@@ -381,7 +390,8 @@ footer .footer-below {
     font-size: 20px;
     line-height: 45px;
 }
-ul > li > a.btn-social > i{
+
+ul > li > a.btn-social > i {
     line-height: inherit;
 }
 
