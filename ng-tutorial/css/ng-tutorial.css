@@ -3,22 +3,17 @@
 .tutorial-black-overlay {
     position: absolute;
     opacity: 0;
-    background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.9) 100%);
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0, 0, 0, 0.4)), color-stop(100%, rgba(0, 0, 0, 0.9)));
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.9) 100%);
-    background: -o-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.9) 100%);
-    background: -ms-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.9) 100%);
-    background: radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.9) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66000000', endColorstr='#e6000000', GradientType=1);
-    -ms-filter: "alpha(opacity=50)";
-    filter: alpha(opacity=50);
+    background: rgb(117,117,117); /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, rgba(117,117,117,0.5) 0%, rgba(19,19,19,0.5) 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(117,117,117,0.5) 0%,rgba(19,19,19,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, rgba(117,117,117,0.5) 0%,rgba(19,19,19,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#757575', endColorstr='#131313',GradientType=1 );
     -webkit-transition: all .3s ease-out;
     -moz-transition: all .3s ease-out;
     -ms-transition: all .3s ease-out;
     -o-transition: all .3s ease-out;
     transition: all .3s ease-out;
     z-index: 999990;
-    background-color: #000;
 }
 
 .tutorial-click-overlay {
@@ -28,7 +23,7 @@
     opacity: 0;
 }
 .tutorial-black-overlay.active, .tutorial-click-overlay.active {
-    opacity: 0.8;
+    opacity: 1;
     top: 0;
     bottom: 0;
     left: 0;
@@ -37,25 +32,47 @@
 }
 
 
-[tutorial].active [tutorial-highlight] {
+[tutorial] [tutorial-highlight].active {
     position: relative;
     z-index: 999995 !important;
     border-radius: 6px;
 }
 
 .tutorial-close{
+    position: fixed;
+    z-index: 999996 !important;
     background: url("../img/icon-close.png");
+    background-repeat: no-repeat;
     -webkit-background-size: contain;
     -moz-background-size: contain;
     background-size: contain;
-    position: absolute;
     top: 20px;
     right: 20px;
-    font-size: 30px;
-    color: #FFF;
     cursor: pointer;
     display: block;
     width: 40px;
     height: 40px;
+}
+
+.tutorial-arrow{
+    position: fixed;
+    z-index: 999996 !important;
     background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+    top: 20px;
+    left: 50%;
+    display: block;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+.tutorial-arrow-right{
+    background-image: url("../img/arrow-right.png");
+    margin-left: 20px;
+}
+.tutorial-arrow-left{
+    background-image: url("../img/arrow-left.png");
+    margin-left: -60px;
 }
