@@ -2,6 +2,7 @@
 Thumbs.db
 ehthumbs.db
 
+*.psd
 
 #JetBrains Projects
 .idea
