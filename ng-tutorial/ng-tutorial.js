@@ -12,7 +12,8 @@ angular.module("ngTutorial", [])
             scope: false,
             link: function (scope, el, attrs) {
                 var j = angular.element;
-                var div = "<div></div>", blackOverlay, clickOverlay, activeClass = "active",
+                var div = "<div></div>", blackOverlay, clickOverlay, activeClass = "active", targets = [],
+                    noBgList = ["p", "label", "span"],
                     white = "rgba(255, 255, 255, 1)", highlightAttr = "tutorial-highlight",
                     currentStep = 0, totalSteps = 0,
                     transparent = "rgba(0, 0, 0, 0)", bgColor = "background-color";
@@ -44,7 +45,6 @@ angular.module("ngTutorial", [])
                     }
                     blackOverlay.appendTo("body");
                 };
-                var targets = el.find("[" + highlightAttr + "]");
 
                 var highlight = function (target) {
                     var container = target.parent();
@@ -78,12 +78,19 @@ angular.module("ngTutorial", [])
                     if (step) filter = "[" + highlightAttr + "='" + step + "']";
                     var toEnable = j(targets).filter(filter);
                     toEnable.each(function () {
-                        highlight(j(this));
+                        var currentHighlight = j(this);
+                        if(noBgList.indexOf(currentHighlight[0].localName) === -1){
+                            highlight(currentHighlight);
+                        }
+                        else{
+                            currentHighlight.addClass(activeClass);
+                        }
                     });
                 };
 
                 var begin = function () {
                     scope.tutorialActive = true;
+                    targets = el.find("[" + highlightAttr + "]");
                     showOverlays();
                     if (scope.hasSteps) {
                         totalSteps = parseInt(attrs["tutorialSteps"]);
